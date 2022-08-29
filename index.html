@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/main.css">
+    <title>Pokedex</title>
+</head>
+<body>
+    <header>
+        Pokedex
+    </header>
+    <main class="pokedex">
+        <form onsubmit="searchPokemon()">
+            <input type="text" name="search">
+            <button type="submit">Buscar Pokemon</button>
+        </form>   
+        <section class="pokedex-pokemon">
+            <h2 class= "pokemon-name" id="pokeName"></h2>
+            <div class="pokemon-img">
+                <button class="pokemon-button" onclick="prevImg()">Izq</button>
+                <img src="" alt="Nombre de Pokemon" id="pokeImg">
+                <button class="pokemon-button" onclick="nextImg()">Der</button>
+            </div>
+                <div class="pokemon-stats">
+                    <div class="pokemon-ps">
+                        <span>PS</span>
+                        <div class="progress-bar">
+                            <span id="ps">0</span>
+                        </div>
+                    </div>
+                    <div class="pokemon-damage">
+                        <span>Damage</span>
+                        <div class="progress-bar">
+                            <span id="dmg">0</span>
+                        </div>
+                    </div>
+                    <div class="pokemon-defense">
+                        <span>Defense</span>
+                        <div class="progress-bar">
+                            <span id="dfs">0</span>
+                        </div>
+                    </div>
+                    <div class="pokemon-velocity">
+                        <span>Velocity</span>
+                        <div class="progress-bar">
+                            <span id="vel">0</span>
+                        </div>
+                    </div>
+                    <div class="pokemon-defense-sp">
+                        <span>Special Defense</span>
+                        <div class="progress-bar">
+                            <span id="sp-def">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pokedex-next">
+                    <button class="pokedex-button" onclick="prevPokemon()">Prev pokemon</button>
+                    <button class="pokedex-button" onclick="nextPokemon()">Next pokemon</button>
+                </div>
+            </div>
+        </section>
+        <section class="pokedex-info">
+            <div class="pokemon-description">
+                <p id="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi obcaecati consequatur aliquam nobis suscipit velit mollitia nesciunt sit, nihil eveniet voluptatum id, dignissimos facilis impedit veritatis aperiam, neque beatae quos.</p>
+            </div>
+            <ul class="pokedex-evolution" id="evol"> 
+            </ul>
+        </section>
+    </main>
+    <section>
+        <h2 class="tittle">Los mejores pokemons</h2>
+        <button onclick = "prevPokemons()">Prev Pokemons</button>
+        <button onclick= "nextPokemons()">Next Pokemons</button>
+        <ul id="pokemons"</ul>
+    </section>
+    <footer>
+        Hecho por @Ramiro_py
+    </footer>
+    
+    <script src="./src/index.js"></script>
+</body>
+</html>
